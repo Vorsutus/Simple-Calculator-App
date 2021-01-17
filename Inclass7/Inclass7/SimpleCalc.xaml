@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Inclass7.SimpleCalc">
+    <ContentPage.Content>
+
+            <Grid Padding="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Simple Calculator" 
+                       Grid.Row="0"             
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="40"
+                       FontAttributes="Bold, Italic"/>
+                
+                <Label Text="Number 1:"
+                       FontSize="30"
+                       HorizontalOptions="End"
+                       Grid.Row="1" 
+                       Grid.Column="0" />
+                <Entry Placeholder="Enter Num1"
+                       x:Name="Num1Box"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="1" 
+                       Grid.Column="1"/>
+                
+                <Label Text="Number 2:"
+                       HorizontalOptions="End"
+                       FontSize="30"
+                       Grid.Row="2" 
+                       Grid.Column="0" />
+                <Entry Placeholder="Enter Num2"
+                       x:Name="Num2Box"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="2" 
+                       Grid.Column="1" />
+                
+                <Label Text="Result Is:"
+                       FontSize="30"
+                       HorizontalOptions="End"
+                       Grid.Row="3" 
+                       Grid.Column="0" />
+                <Label Text=" "
+                       x:Name="ResultBox"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="3" 
+                       Grid.Column="1" />
+                
+                
+                <Button Text="ADDITION"
+                        TextColor="Black"   
+                        BackgroundColor="DarkGray"
+                        Grid.Row="4" 
+                        Grid.Column="0"
+                        Clicked="Addition_Clicked"/>
+                
+                <Button Text="SUBTRACTION"                       
+                        TextColor="Black"
+                        BackgroundColor="DarkGray"
+                        Grid.Row="4" 
+                        Grid.Column="1"
+                        Clicked="Subtraction_Clicked"/>
+                
+                <Button Text="MULTIPLICATION"
+                        TextColor="Black"
+                        BackgroundColor="DarkGray"
+                        Grid.Row="5" 
+                        Grid.Column="0"
+                        Clicked="Multiplication_Clicked"/>
+                
+                <Button Text="DIVISION"
+                        TextColor="Black"
+                        BackgroundColor="DarkGray"
+                        Grid.Row="5 "
+                        Grid.Column="1"
+                        Clicked="Division_Clicked"/>
+                
+                <Button Text="REMAINDER"
+                        TextColor="Black"
+                        BackgroundColor="DarkGray"
+                        Grid.Row="6" 
+                        Grid.Column="0"
+                        Clicked="Remainder_Clicked"/>
+                
+                <Button Text="CLEAR"
+                        TextColor="Black"
+                        BackgroundColor="DarkGray"
+                        Grid.Row="6" 
+                        Grid.Column="1"
+                        Clicked="Clear_Clicked"/>
+            </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
